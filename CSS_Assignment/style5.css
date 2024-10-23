@@ -1,0 +1,21 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+.custom-list {
+    list-style-image: url('https://imgs.search.brave.com/tZkOMf5mGxKqF273sQy9xa_9JS_wc26h2SPR7g83GXg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dmh2LnJzL2Rwbmcv/ZC80MzYtNDM2ODk3/M19ianAtc3ltYm9s/LXBuZy1wbmctZG93/bmxvYWQtc2lrc2hh/LW8tYW51c2FuZGhh/bi5wbmc'); 
+   
+    padding-left: 400px;
+    
+    height: fit-content ;
+    background-size:16px 16px;
+   
+    background-repeat: no-repeat; 
+}
+
+.custom-list li{
+background-position: 0px 0px;
+padding-left: 20px;
+margin: 5px 0;
+}
