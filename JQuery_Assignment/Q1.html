@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Background Color Changer</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            margin: 20px;
+        }
+        .color-button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        .red { background-color: red; }
+        .blue { background-color: blue; }
+        .green { background-color: green; }
+    </style>
+</head>
+<body>
+
+    <h1>Change Background Color</h1>
+    <button class="color-button red">Red</button>
+    <button class="color-button blue">Blue</button>
+    <button class="color-button green">Green</button>
+    <br>
+    <button id="toggleDivs">Toggle Divs</button>
+
+    <div style="margin: 20px; padding: 20px; border: 1px solid black;">This is a div element 1.</div>
+    <div style="margin: 20px; padding: 20px; border: 1px solid black;">This is a div element 2.</div>
+    <div style="margin: 20px; padding: 20px; border: 1px solid black;">This is a div element 3.</div>
+
+    <script>
+        $(document).ready(function() {
+            $('.red').click(function() {
+                $('body').css('background-color', 'red');
+            });
+            $('.blue').click(function() {
+                $('body').css('background-color', 'blue');
+            });
+            $('.green').click(function() {
+                $('body').css('background-color', 'green');
+            });
+            $('#toggleDivs').click(function() {
+                $('div').toggle();
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fetch Text and HTML Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #content {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="fetchText">Fetch Text</button>
+    <button id="fetchHTML">Fetch HTML</button>
+
+    <p id="textContent">This is the text content of the paragraph.</p>
+    <div id="htmlContent">
+        <strong>This is the HTML content</strong> of the div.
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#fetchText').click(function() {
+                var text = $('#textContent').text();
+                alert('Text Content: ' + text);
+            });
+
+            $('#fetchHTML').click(function() {
+                var html = $('#htmlContent').html();
+                alert('HTML Content: ' + html);
+            });
+        });
+    </script>
+
+</body>
+</html>

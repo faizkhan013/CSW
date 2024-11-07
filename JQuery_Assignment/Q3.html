@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animation Control</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #myDiv {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div id="myDiv"></div>
+<button id="startBtn">Start</button>
+<button id="stopBtn">Stop</button>
+
+<script>
+    let animation;
+
+    $('#startBtn').click(function() {
+        $('#myDiv').stop(true);
+        animation = $('#myDiv').animate({ width: '400px' }, 2000);
+    });
+
+    $('#stopBtn').click(function() {
+        $('#myDiv').stop();
+    });
+</script>
+
+</body>
+</html>

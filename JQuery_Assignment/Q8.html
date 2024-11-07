@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Remove Element by ID</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #content {
+            margin: 20px 0;
+        }
+        .paragraph {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Remove Element by ID</h2>
+    <input type="text" id="elementId" placeholder="Enter ID to remove">
+    <button id="removeButton">Remove Element</button>
+
+    <div id="content">
+        <div class="paragraph" id="para1">This is paragraph 1.</div>
+        <div class="paragraph" id="para2">This is paragraph 2.</div>
+        <div class="paragraph" id="para3">This is paragraph 3.</div>
+        <div class="paragraph" id="para4">This is paragraph 4.</div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#removeButton').click(function() {
+                var idToRemove = $('#elementId').val();
+                $('#' + idToRemove).remove();
+                $('#elementId').val('');
+            });
+        });
+    </script>
+
+</body>
+</html>

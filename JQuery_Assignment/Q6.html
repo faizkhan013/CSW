@@ -1,0 +1,43 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Class Manipulation Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #myDiv {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000;
+            margin: 20px 0;
+            text-align: center;
+            line-height: 100px;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        .dim {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Apply Class to Div</h2>
+    <div id="myDiv">Hello, World!</div>
+    <button id="addHighlight">Add Highlight</button>
+    <button id="addDim">Add Dim</button>
+
+    <script>
+        $(document).ready(function() {
+            $('#addHighlight').click(function() {
+                $('#myDiv').removeClass('dim').addClass('highlight');
+            });
+
+            $('#addDim').click(function() {
+                $('#myDiv').removeClass('highlight').addClass('dim');
+            });
+        });
+    </script>
+
+</body>
+</html>
